@@ -75,7 +75,7 @@ const Multiform = () => {
                           })
                     }
                  </div>
-               </div>
+            </div>
             </div>
             <motion.div className={styles.box22}
                initial={{opacity:0,x:100}}
