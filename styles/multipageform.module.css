@@ -1,0 +1,275 @@
+
+.container{
+    height: 280px;
+    width: 600px;
+    /* background-color:#800080; */
+    /* background-color: #FF00FF; */
+    border-radius: 5px;
+    position: relative;
+    border-top-right-radius: 10px;
+}
+
+ .container5{
+    height:480px;
+    width: 600px;
+    background-color: #20b2aa;
+    border-radius: 5px;
+    position: relative;
+    border-top-right-radius: 10px;
+} 
+.progressLinks{
+    width: 585px;
+    display: flex;
+    justify-content: space-between;
+}
+.heading{
+    font-size: 20px;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading h2{
+     color: blue;
+     margin-right: 100px;   
+}
+.headmp{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color:black;
+}
+
+.form1{
+    width:280px;
+    position: absolute;
+    left:40px;
+}
+
+.input1{
+   width: 500px;
+   padding: 10px 5px;
+   margin: 5px 0;
+   border: 0;
+   font-size: 20px;
+   margin-top: 20px;
+   border: 2px solid black;
+   border-radius: 5px;
+   background: transparent;
+}
+
+.inputm{
+   /* position: relative; */
+   width: 500px;
+   padding: 10px 5px;
+   margin: 5px 0;
+   border: 0;
+   font-size: 22px;
+   margin-top: 20px;
+   background-color:#FFFFFF;
+   border-radius: 20px;
+   outline: none;
+   border: 1px solid lightgrey;
+   padding-left: 20px;
+   letter-spacing: 0.5px;
+   padding-right: 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.inputm:hover{
+    background-color:lightgreen;
+    border: 2px solid blue;
+}
+.inputm::placeholder{
+   color: #777;
+   position: absolute;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btnBox{
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+ .btnBox{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    /* background: linear-gradient(to right, #ff105f,#ffad06); */
+    background: linear-gradient(to right,#FF1493,blue);
+    border-radius: 30px;
+    border: 0; 
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-top: 20px;
+} 
+
+.btnBox:hover{
+    background: linear-gradient(to right,blue,#00FF00);;
+}
+.inputpage3{
+    width: 450px;
+   padding: 10px 5px;
+   margin: 5px 0;
+   border: 0;
+   font-size: 22px;
+   margin-top: 20px;
+   background-color:#FFFFFF;
+   border-radius: 20px;
+   outline: none;
+   border: 1px solid lightgrey;
+   padding-left: 20px;
+   letter-spacing: 0.5px;
+   padding-right: 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formsContainer{
+    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e040b0;
+    height: 100vh;
+}
+.box22{
+    position: absolute;
+    width:600px;
+    border-radius: 10px;
+    margin-top: 100px;
+    background-color: #20b2aa; 
+    border: 1px solid lightgray;
+    z-index: 1;   
+}
+.btndiv{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.progress{
+    height: 20px;
+    width: 585px;
+    position: absolute;
+    background-color: lightyellow;
+    border: 1px solid #008080;
+    z-index: 100;
+    margin-top: 60px; 
+    border-radius: 10px;
+}
+
+/* .progressLinks{
+    width: 300px;
+    background-color: #00FF00;
+   display: flex;
+   
+   padding-left: 5px;
+   padding-right: 5px;
+} */
+
+ .link{
+  color: blue;
+}
+.link:hover{
+    cursor: pointer;
+}
+ /* .link{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}  */
+.preInput{
+    height: 35px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+.checkbox1{
+  height: 20px;
+  width:20px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.inputbox1{
+    display: flex; 
+    gap:10px;
+}
+
+@media screen and (max-width: 678px) {
+    .box22{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .inputm{
+        width: 270px;
+        font-size: large;
+    }
+       .heading h2{
+        margin-right: 400px;
+        font-weight: 400;
+       }
+       .form1{
+         left: 10px;
+       }
+       .inputpage3{
+         width: 210px;
+       }
+       .preInput{
+         width: 50px;
+       }
+       .container5{
+        width: 300px;
+       }
+       .progress{
+         width: 300px;
+       }
+       .progressLinks{
+        width: 300px;
+       }
+       .inputm{
+        margin-top: 10px;
+       }
+       .container5{
+        height: 450px;
+     }
+  }
+  @media screen and (max-height: 610px){
+     .container5{
+        height: 420px;
+     }
+     .box22{
+        margin-top: 50px;
+     }
+     .progress{
+        margin-top: 20px;
+     }
+     .form1 h2{
+        margin-top: 10px;
+        margin-right: 80px;
+     }
+     .inputm{
+        margin-top: 10px;
+     }
+     .btnBox{
+        margin-top: 0px;
+     }
+  }
+  @media screen and (max-height: 810px) and (max-width:1020){
+    .form1 h2{
+        margin-top: 10px;
+        margin-right: 100px;
+     }
+  }
