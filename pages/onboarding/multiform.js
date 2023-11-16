@@ -67,6 +67,7 @@ const Multiform = () => {
     <div className={styles.formsContainer}>
         
             <div className={styles.progress}>
+            <div style={{height:'19px',width:`${7.69*bar}%`,backgroundColor:'green',borderRadius:'10px'}}>
                  <div  className={styles.progressLinks} style={{height:'19px'}}>
                     {
                         Pages.map(function(ele, i, arrayobj) {
@@ -74,6 +75,7 @@ const Multiform = () => {
                           })
                     }
                  </div>
+               </div>
             </div>
             <motion.div className={styles.box22}
                initial={{opacity:0,x:100}}
