@@ -1,44 +1,31 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Formik} from "formik";
-import Link from 'next/link';
 import styles from '../../styles/login.module.css'
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import KeyIcon from '@mui/icons-material/Key';
+import Link from 'next/link';
 
+let errors={};
 const Verification = () => {
-  const [disableSubmitBtn,setDisableSubmitBtn]=useState(true)
-  let errors={}
-  let userDeatails={ email: '', password: '' };
   const userValidation=(values)=> {
-    console.log(values.password.length)
-    if (!values.email) {
-      errors.email = 'Required';
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-    ) {
-      errors.email = 'Invalid email address';
-    }
-    console.log(Object.keys(errors).length)
-    if(Object.keys(errors).length===0){
-        setDisableSubmitBtn(false)
-    }else{
-        setDisableSubmitBtn(true)
-    }
-    return errors;
+      if(!values.num1&&!values.num1&&!values.num1&&!values.num1&&!values.num1&&!values.num1&&!values.num1){
+        errors.code="Enter all fields";
+      }
+      return errors
   }
 
+  function handleInput(event){
+      if (!/[0-9a-zA-Z]/.test(event.key)) {
+        event.preventDefault();
+      }
+  }
+  
   const submitUserData=(values, { setSubmitting }) => {
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
+      alert(JSON.stringify(values, null, 6));
       setSubmitting(false);
     }, 400);
   }
   return (
     <>
-    {/* <div className={styles.logoContainer}>
-        <div className={styles.logoinsta}></div>
-        <div><h1 className={styles.title}><span className='text'>in</span>stanpe</h1></div>
-    </div>  */}
     
     <div className={styles.signin}>
         <div className={styles.leftLogin}>
@@ -47,89 +34,98 @@ const Verification = () => {
         <div className={styles.box}>
            <div className={styles.wrapper}>
             <h1>Verification Code</h1>
-            <Formik
-               initialValues={userDeatails}
-               validate={userValidation}
-               onSubmit={submitUserData}
-            >
-         {({
-           values,
-           errors,
-           touched,
-           handleChange,
-           handleBlur,
-           handleSubmit,
-           isSubmitting,
+         <Formik
+       initialValues={{ num1: '',  num2: '', num3: '', num4: '', num5: '', num6: '' }}
+       validate={userValidation}
+       onSubmit={submitUserData}
+     >
+       {({
+         values,
+         errors,
+         touched,
+         handleChange,
+         handleBlur,
+         handleSubmit,
+         isSubmitting,
          /* and other goodies */
        }) => (
         <form onSubmit={handleSubmit}>
-            <div className={styles.text99}>
-              <h4>Enter Your Verification Code</h4>
-            </div>
-            <div className={styles.inputBox1}>
-                  <input
-                    className={styles.inputLogin1}
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                />
-                <input
-                    className={styles.inputLogin1}
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                />
-                <input
-                    className={styles.inputLogin1}
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                />
-                <input
-                    className={styles.inputLogin1}
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                />
-                <input
-                    className={styles.inputLogin1}
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                />
-                <input
-                    className={styles.inputLogin1}
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
+        <div className={styles.text99}>
+          <h4>Enter Your Verification Code</h4>
+        </div>
+        <div className={styles.inputBox1}>
+               <input
+                  className={styles.inputLogin1}
+                  type="text"
+                  name="num1"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.num1}
+                  maxLength={1}
+                  onKeyPress={handleInput}
+                /> 
+            <input
+                  className={styles.inputLogin1}
+                  type="text"
+                  name="num2"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.num2}
+                  maxLength={1}
+                  onKeyPress={handleInput}
+                /> 
+            <input
+                  className={styles.inputLogin1}
+                  type="text"
+                  name="num3"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.num3}
+                  maxLength={1}
+                  onKeyPress={handleInput}
+                /> 
+            <input
+                  className={styles.inputLogin1}
+                  type="text"
+                  name="num4"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.num4}
+                  maxLength={1}
+                  onKeyPress={handleInput}
+                /> 
+            <input
+                  className={styles.inputLogin1}
+                  type="text"
+                  name="num5"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.num5}
+                  maxLength={1}
+                  onKeyPress={handleInput}
+                /> 
+            <input
+                  className={styles.inputLogin1}
+                  type="text"
+                  name="num6"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.num6}
+                  maxLength={1}
+                  onKeyPress={handleInput}
                 /> 
             </div>
-            <Link href='/forgot/resetpassword'>
-               <button  type='submit' style={{marginTop:'50px'}}  className={styles.btn}>Submit</button>
-            </Link>
-        
-            
-        </form>
-       )}
-       </Formik>
-    </div>
-    </div>
+         <Link href='/forgot/resetpassword'> 
+           <button  type='submit' style={{marginTop:'50px'}}  className={styles.btn}>Submit</button>
+         </Link>
+    </form>
+   )}
+     </Formik>
+         </div>
+         </div>
     </div>
     </>
   )
 }
 
 export default Verification
-
