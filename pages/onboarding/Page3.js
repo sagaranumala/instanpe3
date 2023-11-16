@@ -15,7 +15,7 @@ const Page3 = ({cData,setCData,bar,setBar}) => {
     <div className={styles.container}>
               <form id='form1' className={styles.form1}>
                  <div className={styles.heading}><h2 className={styles.headmp}><input 
-                 checked={cData.checkbox3}
+                 checked={cData?.checkbox3}
                  onChange={(e)=>{setCData({...cData,checkbox3:e.target.checked?true:false})}} 
                  onClick={handleChecbox} className={styles.checkbox1} type="checkbox"/>Interbank Settlement*</h2></div>
                  <div className={styles.inputbox1}>

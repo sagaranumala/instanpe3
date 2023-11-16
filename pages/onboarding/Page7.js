@@ -15,7 +15,7 @@ const Page7 = ({cData,setCData,bar,setBar}) => {
     <div className={styles.container5}>
               <form id='form1' className={styles.form1}>
                  <div className={styles.heading}><h2 className={styles.headmp}><input 
-                 checked={cData.checkbox7}
+                 checked={cData?.checkbox7}
                  onChange={(e)=>{setCData({...cData,checkbox7:e.target.checked?true:false})}} 
                  onClick={handleChecbox} className={styles.checkbox1} type="checkbox"/>Initiating Party</h2></div>
                  <input type='text' className={styles.inputm} placeholder='Name*' required/>
